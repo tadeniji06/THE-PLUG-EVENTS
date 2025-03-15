@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  padding: 3px;
+}
+
 body {
   font-family: "Big Shoulders Stencil", cursive;
 }
