@@ -181,7 +181,7 @@ const RecentEvents = () => {
             className='text-4xl font-bold mb-4 relative inline-block'
           >
             <span className='bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-blue-600'>
-              RECENTLY PLANNED EVENTS
+              EVENTS
             </span>
             <div
               className='absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-primary-blue to-blue-600 transform scale-x-0 origin-left transition-transform duration-700 ease-out'
