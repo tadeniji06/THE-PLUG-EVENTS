@@ -90,8 +90,8 @@ export const features = [
 export const categories = [
   {
     title: "CONCERTS",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    description: `Get ready to groove with Plug Events, your premier destination for unforgettable live music experiences! From
+hottest local and international acts, showcasing a diverse range of genres and styles designed to leave you breathless and yearning for more!`,
     icon: "mdi:music-note",
     color: "bg-pink-500",
     image:
@@ -99,8 +99,8 @@ export const categories = [
   },
   {
     title: "TOUR",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    description: `Explore the World with Plug Events Tours!
+Embark on unforgettable journeys with Plug Events, your premier tour partner for unique, immersive and enriching experiences`,
     icon: "mdi:bus",
     color: "bg-purple-500",
     image:
@@ -108,8 +108,7 @@ export const categories = [
   },
   {
     title: "COMEDY",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    description: `Unstoppable hilarious jokes, witty one-liners, and ridiculous antics from the most talented comedians in the business!`,
     icon: "mdi:emoticon-happy-outline",
     color: "bg-yellow-500",
     image:
@@ -117,8 +116,7 @@ export const categories = [
   },
   {
     title: "BUSINESS",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    description: `Elevate your professional network and stay ahead of the curve with Plug Events' business conferences, seminars, and workshops!`,
     icon: "mdi:briefcase",
     color: "bg-blue-500",
     image:
@@ -126,8 +124,7 @@ export const categories = [
   },
   {
     title: "SPORT",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    description: `Experience the thrill of competition and camaraderie in the world of sports, tournaments, and activities with Plug Events`,
     icon: "mdi:basketball",
     color: "bg-green-500",
     image:
@@ -135,8 +132,7 @@ export const categories = [
   },
   {
     title: "WEDDING",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    description: `From intimate gatherings to grand affairs, we'll help you create a wedding that reflects your romantic unique love story.`,
     icon: "mdi:ring",
     color: "bg-red-500",
     image:

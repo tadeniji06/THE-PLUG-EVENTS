@@ -81,9 +81,9 @@ const Hero = () => {
                 </p>
                 <Link
                   to='/events'
-                  className='bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300'
+                  className='bg-primary-yellow hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-full transition duration-300'
                 >
-                  Explore Events
+                  Event Gallery
                 </Link>
               </div>
             </div>

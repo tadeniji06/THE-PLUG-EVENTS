@@ -12,16 +12,16 @@ const Categories = () => {
         {/* Header */}
         <div className='text-center mb-12'>
           <h2 className='text-3xl font-bold mb-4'>
-            EXPLORE OUR CATEGORIES
+            EXPLORE OUR SERVICES
           </h2>
           <div className='flex justify-center mb-4'>
             <div className='w-24 h-1 bg-primary-blue'></div>
           </div>
           <div className='mb-6'>
-            <Icon
+            {/* <Icon
               icon='fontisto:heartbeat-alt'
               className='text-5xl text-primary-blue text-center mx-auto'
-            />
+            /> */}
           </div>
           <p className='text-gray-600 max-w-2xl mx-auto'>
             Discover the perfect event for every occasion. From
@@ -93,9 +93,9 @@ const Categories = () => {
         <div className='text-center mt-12'>
           <Link
             to='/events'
-            className='bg-primary-blue hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-flex items-center'
+            className='bg-primary-yellow hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-flex items-center'
           >
-            View All Categories
+            View All Services
             <Icon
               icon='material-symbols:arrow-forward-rounded'
               className='ml-2'

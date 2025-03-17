@@ -14,10 +14,10 @@ const Aim = () => {
         </h2>
 
         <div className='mt-6'>
-          <Icon
+          {/* <Icon
             icon='fontisto:heartbeat-alt'
             className='text-5xl text-primary-blue text-center mx-auto'
-          />
+          /> */}
         </div>
 
         <p className='text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed'>
@@ -59,7 +59,7 @@ const Aim = () => {
 
       {/* Call to action */}
       <div className='text-center mt-16'>
-        <button className='bg-primary-blue hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 flex items-center mx-auto'>
+        <button className='bg-primary-yellow hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 flex items-center mx-auto'>
           <Link to={"/about"}> Learn More About Us</Link>
           <Icon
             icon='material-symbols:arrow-forward-rounded'

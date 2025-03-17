@@ -268,7 +268,7 @@ const RecentEvents = () => {
         <div className='text-center mt-16'>
           <Link to='/events' className='relative inline-block group'>
             <span className='absolute inset-0 bg-primary-blue rounded-full transform scale-110 opacity-10 group-hover:scale-125 group-hover:opacity-20 transition-all duration-300'></span>
-            <span className='relative bg-primary-blue hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full inline-flex items-center transition-all duration-300 shadow-lg hover:shadow-xl'>
+            <span className='relative bg-primary-yellow hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-full inline-flex items-center transition-all duration-300 shadow-lg hover:shadow-xl'>
               View All Events
               <Icon
                 icon='material-symbols:arrow-forward-rounded'

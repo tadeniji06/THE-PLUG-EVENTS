@@ -242,7 +242,7 @@ const Appointment = () => {
             <div className='absolute top-0 right-0 w-32 h-32 bg-primary-blue bg-opacity-10 rounded-bl-full'></div>
 
             <h3 className='text-2xl font-bold mb-6 relative z-10'>
-              Book Your Consultation
+              Make an enquiry
             </h3>
 
             <form onSubmit={handleSubmit}>

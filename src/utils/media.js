@@ -10,4 +10,20 @@ import Arena from "../assets/images/Gallery/Arena.jpg";
 import GrandFiesta from "../assets/images/Gallery/GrandFiesta.jpg";
 import IgboAmaka from "../assets/images/Gallery/IgboAmaka.jpg";
 
-export { logo, hero1, hero2, hero3, Arena, GrandFiesta, IgboAmaka, Qr };
+import owoh from "../assets/images/owoh.jpg";
+import logoH from "../assets/images/logoH.jpg";
+import GP from "../assets/images/GP.jpg";
+
+export {
+  logo,
+  hero1,
+  hero2,
+  hero3,
+  Arena,
+  GrandFiesta,
+  IgboAmaka,
+  Qr,
+  owoh,
+  logoH,
+  GP,
+};

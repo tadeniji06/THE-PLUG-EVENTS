@@ -176,7 +176,7 @@ const EventGallery = () => {
         <div className='text-center mt-8'>
           <Link
             to='/gallery'
-            className='bg-primary-blue hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-flex items-center'
+            className='bg-primary-yellow hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-flex items-center'
           >
             View More
             <Icon

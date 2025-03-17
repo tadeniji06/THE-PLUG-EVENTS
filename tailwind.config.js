@@ -4,7 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary-blue": "#1A76D1",
+        "primary-blue": "#07009C",
+        "footer-bg":"#07009C",
+        "primary-yellow":"#FFA500"
       },
     },
   },
