@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
-import { Link } from "react-router-dom";
 import { categories } from "../../utils/constants";
 
 const Categories = () => {
@@ -11,9 +10,7 @@ const Categories = () => {
       <div className='max-w-7xl mx-auto'>
         {/* Header */}
         <div className='text-center mb-12'>
-          <h2 className='text-3xl font-bold mb-4'>
-            EXPLORE OUR SERVICES
-          </h2>
+          <h2 className='text-3xl font-bold mb-4'>EXPLORE OUR SERVICES</h2>
           <div className='flex justify-center mb-4'>
             <div className='w-24 h-1 bg-primary-blue'></div>
           </div>
@@ -87,20 +84,6 @@ const Categories = () => {
               ></div>
             </div>
           ))}
-        </div>
-
-        {/* View All Button */}
-        <div className='text-center mt-12'>
-          <Link
-            to='/events'
-            className='bg-primary-yellow hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-flex items-center'
-          >
-            View All Services
-            <Icon
-              icon='material-symbols:arrow-forward-rounded'
-              className='ml-2'
-            />
-          </Link>
         </div>
       </div>
     </div>

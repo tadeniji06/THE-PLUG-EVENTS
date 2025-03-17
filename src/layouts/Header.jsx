@@ -75,7 +75,7 @@ const Header = () => {
             </Link>
           ))}
           <button className='font-bold px-2 py-2 bg-primary-blue rounded-md text-white'>
-            Book Appointment
+            <Link to='/appointment'>Book Appointment</Link>{" "}
           </button>
         </div>
 
@@ -111,9 +111,9 @@ const Header = () => {
                 {link.name}
               </Link>
             ))}
-              <button className='font-bold px-2 py-2 bg-primary-blue rounded-md text-white'>
-            Book Appointment
-          </button>
+            <button className='font-bold px-2 py-2 bg-primary-blue rounded-md text-white'>
+              <Link to='/appointment'>Book Appointment</Link>{" "}
+            </button>
           </div>
         </div>
       </div>

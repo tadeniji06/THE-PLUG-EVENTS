@@ -6,6 +6,7 @@ import Service from "../screens/Service";
 import Gallery from "../screens/Gallery";
 import NotFound from "../screens/NotFound";
 import Upcoming from "../screens/Upcoming";
+import AppointmentPage from "../screens/AppointmentPage";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/events",
         element: <Upcoming />,
+      },
+      {
+        path: "/appointment",
+        element: <AppointmentPage />,
       },
     ],
   },

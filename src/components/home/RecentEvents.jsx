@@ -248,7 +248,7 @@ const RecentEvents = () => {
                     </span>
                   </div>
 
-                  <Link
+                  {/* <Link
                     to={`/events/${event.id}`}
                     className='text-primary-blue font-semibold flex items-center hover:underline'
                   >
@@ -257,7 +257,7 @@ const RecentEvents = () => {
                       icon='material-symbols:arrow-forward-rounded'
                       className='ml-1'
                     />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
