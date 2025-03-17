@@ -234,7 +234,7 @@ const RecentEvents = () => {
                 </h3>
 
                 <div className='flex items-center text-gray-600 mb-3'>
-                  <Icon icon='mdi:map-marker' className='mr-1' />
+                  {/* <Icon icon='mdi:map-marker' className='mr-1' /> */}
                   {/* <span>{event.location}</span> */}
                 </div>
 
@@ -242,7 +242,7 @@ const RecentEvents = () => {
 
                 <div className='flex justify-between items-center'>
                   <div className='flex items-center text-gray-500'>
-                    <Icon icon='mdi:account-group' className='mr-1' />
+                    {/* <Icon icon='mdi:account-group' className='mr-1' /> */}
                     <span>
                       {/* {event.attendees.toLocaleString()} Attendees */}
                     </span>
