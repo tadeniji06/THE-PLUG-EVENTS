@@ -1,5 +1,3 @@
-
-
 export const navLinks = [
   {
     name: "Home",
@@ -26,30 +24,29 @@ export const socialLinks = [
   {
     name: "Facebook",
     icon: "mdi:facebook",
-    path: "https://www.facebook.com/profile.php?id=100090169259300",
+    path: "/",
   },
   {
     name: "Instagram",
     icon: "mdi:instagram",
-    path: "https://www.instagram.com/plug_events/",
+    path: "/",
   },
   {
     name: "Twitter",
     icon: "mdi:twitter",
-    path: "https://twitter.com/PlugEvents",
+    path: "/",
   },
   {
     name: "LinkedIn",
     icon: "mdi:linkedin",
-    path: "https://www.linkedin.com/company/plug-events/",
+    path: "/",
   },
   {
     name: "YouTube",
     icon: "mdi:youtube",
-    path: "https://www.youtube.com/@plugevents",
+    path: "/",
   },
 ];
-
 
 export const AboutUs = [
   {
@@ -60,5 +57,112 @@ export const AboutUs = [
 export const NewsLetter = [
   {
     body: "subscribe to our newsletter to get all our news and upcoming events calendar in your inbox..",
+  },
+];
+
+export const aim = [
+  {
+    body: "In Africa's dynamic event industry, Plug Events stands out as the premier option offering unmatched events and comprehensive features for organizers and attendees across the continent..",
+  },
+];
+
+export const features = [
+  {
+    title: "Excellent Track Records",
+    description:
+      "We offer the best service obtainable to all our numerous clients since March 2018.",
+    icon: "carbon:chart-line-data",
+  },
+  {
+    title: "Proven Integrity",
+    description:
+      "Testimonies do our talking but much more are the wonderful memories we create.",
+    icon: "mdi:shield-check",
+  },
+  {
+    title: "Highest Standards",
+    description:
+      "Getting the best possible results is the least you can always expect from us.",
+    icon: "fa-solid:award",
+  },
+];
+
+export const categories = [
+  {
+    title: "CONCERTS",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    icon: "mdi:music-note",
+    color: "bg-pink-500",
+    image:
+      "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "TOUR",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    icon: "mdi:bus",
+    color: "bg-purple-500",
+    image:
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "COMEDY",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    icon: "mdi:emoticon-happy-outline",
+    color: "bg-yellow-500",
+    image:
+      "https://images.unsplash.com/photo-1527224857830-43a7acc85260?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "BUSINESS",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    icon: "mdi:briefcase",
+    color: "bg-blue-500",
+    image:
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "SPORT",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    icon: "mdi:basketball",
+    color: "bg-green-500",
+    image:
+      "https://images.unsplash.com/photo-1471295253337-3ceaaedca402?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "WEDDING",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    icon: "mdi:ring",
+    color: "bg-red-500",
+    image:
+      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+];
+
+import { Arena, GrandFiesta, IgboAmaka } from "./media";
+
+export const galleryImages = [
+  {
+    src: Arena,
+    title: "Arena Event",
+    description:
+      "Our spectacular arena setup for large-scale concerts and performances",
+  },
+  {
+    src: GrandFiesta,
+    title: "Grand Fiesta",
+    description:
+      "Colorful celebration with vibrant decorations and entertainment",
+  },
+  {
+    src: IgboAmaka,
+    title: "Igbo Amaka",
+    description:
+      "Traditional cultural celebration showcasing rich heritage",
   },
 ];
