@@ -18,7 +18,7 @@ const RecentEvents = () => {
     {
       id: 1,
       title: "Igbo Amaka Festival",
-      date: "22 March 2025",
+      date: "13 April 2025",
       location: "Lagos Cultural Center",
       image: IgboAmaka,
       category: "Cultural",
@@ -29,7 +29,7 @@ const RecentEvents = () => {
     {
       id: 2,
       title: "Grand Fiesta",
-      date: "15 April 2025",
+      date: "28 Nov 2024",
       location: "Beachfront Resort",
       image: GrandFiesta,
       category: "Party",
@@ -40,7 +40,7 @@ const RecentEvents = () => {
     {
       id: 3,
       title: "Arena Concert Series",
-      date: "7 June 2025",
+      date: "14 Feb 2025",
       location: "National Stadium",
       image: Arena,
       category: "Concert",
@@ -235,16 +235,16 @@ const RecentEvents = () => {
 
                 <div className='flex items-center text-gray-600 mb-3'>
                   <Icon icon='mdi:map-marker' className='mr-1' />
-                  <span>{event.location}</span>
+                  {/* <span>{event.location}</span> */}
                 </div>
 
-                <p className='text-gray-600 mb-4'>{event.description}</p>
+                {/* <p className='text-gray-600 mb-4'>{event.description}</p> */}
 
                 <div className='flex justify-between items-center'>
                   <div className='flex items-center text-gray-500'>
                     <Icon icon='mdi:account-group' className='mr-1' />
                     <span>
-                      {event.attendees.toLocaleString()} Attendees
+                      {/* {event.attendees.toLocaleString()} Attendees */}
                     </span>
                   </div>
 
