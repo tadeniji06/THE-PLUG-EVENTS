@@ -11,10 +11,10 @@ export const navLinks = [
   //   name: "Services",
   //   path: "/services",
   // },
-  {
-    name: "Gallery",
-    path: "/gallery",
-  },
+  // {
+  //   name: "Gallery",
+  //   path: "/gallery",
+  // },
   {
     name: "Upcoming Events",
     path: "/events",
