@@ -148,65 +148,82 @@ const Appointment = () => {
   return (
     <section
       ref={sectionRef}
-      className='py-20 px-4 bg-gradient-to-br from-blue-50 to-white'
+      className="py-20 px-4 bg-gradient-primary text-neutral-800"
     >
-      <div className='max-w-7xl mx-auto'>
-        <div className='text-center mb-12'>
-          <h2 ref={headingRef} className='text-4xl font-bold mb-4'>
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 ref={headingRef} className="text-4xl font-bold mb-4 text-white">
             Schedule an Appointment
           </h2>
-          <p className='text-gray-600 max-w-2xl mx-auto'>
+          <p className="text-neutral-100 max-w-2xl mx-auto">
             Ready to plan your next event? Book a consultation with our
             expert event planners to bring your vision to life.
           </p>
         </div>
 
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* QR Code Section */}
-          <div className='flex flex-col items-center justify-center'>
+          <div className="flex flex-col items-center justify-center">
             <div
               ref={qrRef}
-              className='relative p-6 bg-white rounded-2xl shadow-xl'
+              className="relative p-6 bg-white rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-300"
             >
               <img
                 src={Qr}
-                alt='Appointment QR Code'
-                className='w-64 h-64 object-contain mx-auto'
+                alt="Appointment QR Code"
+                className="w-64 h-64 object-contain mx-auto"
               />
 
               {/* Decorative elements */}
-              <div className='absolute -top-3 -left-3 w-8 h-8 bg-primary-blue rounded-full'></div>
-              <div className='absolute -bottom-3 -right-3 w-8 h-8 bg-primary-blue rounded-full'></div>
-              <div className='absolute -top-3 -right-3 w-6 h-6 bg-yellow-400 rounded-full'></div>
-              <div className='absolute -bottom-3 -left-3 w-6 h-6 bg-yellow-400 rounded-full'></div>
+              <div className="absolute -top-3 -left-3 w-8 h-8 bg-primary-blue rounded-full"></div>
+              <div className="absolute -bottom-3 -right-3 w-8 h-8 bg-primary-blue rounded-full"></div>
+              <div className="absolute -top-3 -right-3 w-6 h-6 bg-primary-yellow rounded-full"></div>
+              <div className="absolute -bottom-3 -left-3 w-6 h-6 bg-primary-yellow rounded-full"></div>
             </div>
 
-            <div className='mt-8 text-center'>
-              <h3 className='text-2xl font-bold mb-3'>
+            <div className="mt-8 text-center bg-white bg-opacity-90 p-6 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold mb-3 text-primary-blue">
                 Scan & Book Instantly
               </h3>
-              <p className='text-gray-600 mb-4'>
+              <p className="text-neutral-700 mb-4">
                 Scan this QR code with your smartphone camera to instantly
                 schedule an appointment with our team.
               </p>
-              <div className='flex justify-center space-x-4 mt-6'>
+              <div className="flex justify-center space-x-4 mt-6">
                 <a
-                  href='#'
-                  className='text-primary-blue hover:text-blue-700 transition-colors'
+                  href="https://wa.link/kor2r4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-blue hover:text-primary-blue-light transition-colors transform hover:scale-110 duration-300 flex flex-col items-center"
                 >
-                  <Icon icon='mdi:whatsapp' className='text-3xl' />
+                  <Icon icon="mdi:whatsapp" className="text-4xl" />
+                  <span className="text-sm mt-1">WhatsApp</span>
                 </a>
                 <a
-                  href='#'
-                  className='text-primary-blue hover:text-blue-700 transition-colors'
+                  href="#"
+                  className="text-primary-blue hover:text-primary-blue-light transition-colors transform hover:scale-110 duration-300 flex flex-col items-center"
                 >
-                  <Icon icon='mdi:instagram' className='text-3xl' />
+                  <Icon icon="mdi:instagram" className="text-4xl" />
+                  <span className="text-sm mt-1">Instagram</span>
                 </a>
                 <a
-                  href='#'
-                  className='text-primary-blue hover:text-blue-700 transition-colors'
+                  href="#"
+                  className="text-primary-blue hover:text-primary-blue-light transition-colors transform hover:scale-110 duration-300 flex flex-col items-center"
                 >
-                  <Icon icon='mdi:twitter' className='text-3xl' />
+                  <Icon icon="mdi:twitter" className="text-4xl" />
+                  <span className="text-sm mt-1">Twitter</span>
+                </a>
+              </div>
+              
+              <div className="mt-6">
+                <a
+                  href="https://wa.link/kor2r4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-gradient-secondary text-white font-semibold rounded-lg shadow-md hover:shadow-lg transform hover:translate-y-[-2px] transition-all duration-300"
+                >
+                  <Icon icon="mdi:whatsapp" className="mr-2 text-xl" />
+                  Chat with Us on WhatsApp
                 </a>
               </div>
             </div>
@@ -215,22 +232,22 @@ const Appointment = () => {
           {/* Form Section */}
           <div
             ref={formRef}
-            className='bg-white p-8 rounded-2xl shadow-lg relative overflow-hidden'
+            className="bg-white p-8 rounded-2xl shadow-lg relative overflow-hidden transform hover:shadow-xl transition-shadow duration-300"
           >
             {/* Success message */}
             {isSubmitted && (
-              <div className='absolute inset-0 flex items-center justify-center bg-white bg-opacity-95 z-10 animate-fadeIn'>
-                <div className='text-center p-6'>
-                  <div className='w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4'>
+              <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-95 z-10 animate-fade-in">
+                <div className="text-center p-6">
+                  <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Icon
-                      icon='mdi:check-bold'
-                      className='text-4xl text-green-600'
+                      icon="mdi:check-bold"
+                      className="text-4xl text-green-600"
                     />
                   </div>
-                  <h3 className='text-2xl font-bold text-gray-800 mb-2'>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
                     Appointment Request Sent!
                   </h3>
-                  <p className='text-gray-600'>
+                  <p className="text-gray-600">
                     We'll get back to you within 24 hours to confirm your
                     appointment.
                   </p>
@@ -239,178 +256,183 @@ const Appointment = () => {
             )}
 
             {/* Decorative corner */}
-            <div className='absolute top-0 right-0 w-32 h-32 bg-primary-blue bg-opacity-10 rounded-bl-full'></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-primary bg-opacity-10 rounded-bl-full"></div>
 
-            <h3 className='text-2xl font-bold mb-6 relative z-10'>
+            <h3 className="text-2xl font-bold mb-6 relative z-10 text-primary-blue">
               Make an enquiry
             </h3>
 
             <form onSubmit={handleSubmit}>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-6'>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div ref={(el) => (formElements.current[0] = el)}>
                   <label
-                    className='block text-gray-700 mb-2'
-                    htmlFor='name'
+                    className="block text-neutral-700 mb-2 font-medium"
+                    htmlFor="name"
                   >
                     Full Name
                   </label>
                   <input
-                    type='text'
-                    id='name'
-                    name='name'
+                    type="text"
+                    id="name"
+                    name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-blue focus:ring-2 focus:ring-blue-200 outline-none transition-all'
-                    placeholder='Your name'
+                    className="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary-blue focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                    placeholder="Your name"
                     required
                   />
                 </div>
 
                 <div ref={(el) => (formElements.current[1] = el)}>
                   <label
-                    className='block text-gray-700 mb-2'
-                    htmlFor='email'
+                    className="block text-neutral-700 mb-2 font-medium"
+                    htmlFor="email"
                   >
                     Email Address
                   </label>
                   <input
-                    type='email'
-                    id='email'
-                    name='email'
+                    type="email"
+                    id="email"
+                    name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-blue focus:ring-2 focus:ring-blue-200 outline-none transition-all'
-                    placeholder='your@email.com'
+                    className="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary-blue focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                    placeholder="your@email.com"
                     required
                   />
                 </div>
               </div>
 
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-6'>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div ref={(el) => (formElements.current[2] = el)}>
                   <label
-                    className='block text-gray-700 mb-2'
-                    htmlFor='phone'
+                    className="block text-neutral-700 mb-2 font-medium"
+                    htmlFor="phone"
                   >
                     Phone Number
                   </label>
                   <input
-                    type='tel'
-                    id='phone'
-                    name='phone'
+                    type="tel"
+                    id="phone"
+                    name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-blue focus:ring-2 focus:ring-blue-200 outline-none transition-all'
-                    placeholder='Your phone number'
+                    className="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary-blue focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                    placeholder="Your phone number"
                   />
                 </div>
 
                 <div ref={(el) => (formElements.current[3] = el)}>
                   <label
-                    className='block text-gray-700 mb-2'
-                    htmlFor='eventType'
+                    className="block text-neutral-700 mb-2 font-medium"
+                    htmlFor="eventType"
                   >
                     Event Type
                   </label>
-                  <select
-                    id='eventType'
-                    name='eventType'
-                    value={formData.eventType}
-                    onChange={handleChange}
-                    className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-blue focus:ring-2 focus:ring-blue-200 outline-none transition-all appearance-none bg-white'
-                    required
-                  >
-                    <option value='' disabled>
-                      Select event type
-                    </option>
-                    <option value='wedding'>Wedding</option>
-                    <option value='corporate'>Corporate Event</option>
-                    <option value='birthday'>Birthday Party</option>
-                    <option value='concert'>Concert</option>
-                    <option value='other'>Other</option>
-                  </select>
+                  <div className="relative">
+                    <select
+                      id="eventType"
+                      name="eventType"
+                      value={formData.eventType}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary-blue focus:ring-2 focus:ring-blue-200 outline-none transition-all appearance-none bg-white pr-10"
+                      required
+                    >
+                      <option value="" disabled>
+                        Select event type
+                      </option>
+                      <option value="wedding">Wedding</option>
+                      <option value="corporate">Corporate Event</option>
+                      <option value="birthday">Birthday Party</option>
+                      <option value="concert">Concert</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-neutral-700">
+                      <Icon icon="mdi:chevron-down" className="text-xl" />
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div
                 ref={(el) => (formElements.current[4] = el)}
-                className='mb-6'
+                className="mb-6"
               >
-                <label className='block text-gray-700 mb-2' htmlFor='date'>
+                <label className="block text-neutral-700 mb-2 font-medium" htmlFor="date">
                   Preferred Date
                 </label>
                 <input
-                  type='date'
-                  id='date'
-                  name='date'
+                  type="date"
+                  id="date"
+                  name="date"
                   value={formData.date}
                   onChange={handleChange}
-                  className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-blue focus:ring-2 focus:ring-blue-200 outline-none transition-all'
+                  className="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary-blue focus:ring-2 focus:ring-blue-200 outline-none transition-all"
                   required
                 />
               </div>
 
               <div
                 ref={(el) => (formElements.current[5] = el)}
-                className='mb-6'
+                className="mb-6"
               >
                 <label
-                  className='block text-gray-700 mb-2'
-                  htmlFor='message'
+                  className="block text-neutral-700 mb-2 font-medium"
+                  htmlFor="message"
                 >
                   Tell us about your event
                 </label>
                 <textarea
-                  id='message'
-                  name='message'
+                  id="message"
+                  name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows='4'
-                  className='resize-none w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-blue focus:ring-2 focus:ring-blue-200 outline-none transition-all'
-                  placeholder='Please share some details about your event...'
+                  rows="4"
+                  className="resize-none w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary-blue focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                  placeholder="Please share some details about your event..."
                 ></textarea>
               </div>
 
               <div ref={(el) => (formElements.current[6] = el)}>
                 <button
-                  type='submit'
+                  type="submit"
                   disabled={isSubmitting}
                   className={`w-full py-3 px-6 rounded-lg text-white font-bold transition-all duration-300 relative overflow-hidden ${
                     isSubmitting
-                      ? "bg-gray-400 cursor-not-allowed"
-                      : "bg-primary-blue hover:bg-blue-700"
+                      ? "bg-neutral-400 cursor-not-allowed"
+                      : "bg-gradient-primary hover:shadow-lg transform hover:translate-y-[-2px]"
                   }`}
                 >
                   {isSubmitting ? (
-                    <span className='flex items-center justify-center'>
+                    <span className="flex items-center justify-center">
                       <svg
-                        className='animate-spin -ml-1 mr-3 h-5 w-5 text-white'
-                        xmlns='http://www.w3.org/2000/svg'
-                        fill='none'
-                        viewBox='0 0 24 24'
+                        className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
                       >
                         <circle
-                          className='opacity-25'
-                          cx='12'
-                          cy='12'
-                          r='10'
-                          stroke='currentColor'
-                          strokeWidth='4'
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
                         ></circle>
                         <path
-                          className='opacity-75'
-                          fill='currentColor'
-                          d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                         ></path>
                       </svg>
                       Processing...
                     </span>
                   ) : (
-                    <span className='flex items-center justify-center'>
+                    <span className="flex items-center justify-center">
                       Book Appointment
                       <Icon
-                        icon='material-symbols:arrow-forward-rounded'
-                        className='ml-2'
+                        icon="material-symbols:arrow-forward-rounded"
+                        className="ml-2"
                       />
                     </span>
                   )}
@@ -420,21 +442,6 @@ const Appointment = () => {
           </div>
         </div>
       </div>
-
-      {/* Custom animation styles */}
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.5s ease-in-out;
-        }
-      `}</style>
     </section>
   );
 };

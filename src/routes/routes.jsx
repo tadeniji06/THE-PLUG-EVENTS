@@ -7,6 +7,7 @@ import Gallery from "../screens/Gallery";
 import NotFound from "../screens/NotFound";
 import Upcoming from "../screens/Upcoming";
 import AppointmentPage from "../screens/AppointmentPage";
+import Event from "../components/events/Event";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,14 @@ const router = createBrowserRouter([
       {
         path: "/appointment",
         element: <AppointmentPage />,
+      },
+      {
+        path: "/events/:eventId",
+        element: <Event />,
+      },
+      {
+        path: "/tickets/:eventId",
+        element: <Event />,
       },
     ],
   },

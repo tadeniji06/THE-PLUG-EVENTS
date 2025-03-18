@@ -1,13 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-gradient: linear-gradient(135deg, #07009C 0%, #0D47A1 100%);
+  --secondary-gradient: linear-gradient(135deg, #FFA500 0%, #FF6B00 100%);
+}
+
 * {
-  padding: 3px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", "Roboto", sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+  line-height: 1.6;
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-blue text-white px-6 py-2 rounded-md hover:bg-primary-blue-dark transition-colors duration-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-primary-yellow text-white px-6 py-2 rounded-md hover:bg-primary-yellow-dark transition-colors duration-300;
+  }
+  
+  .section {
+    @apply py-12 px-4 md:px-8 lg:px-16;
+  }
+  
+  .gradient-bg {
+    background: var(--primary-gradient);
+  }
+  
+  .gradient-text {
+    background: var(--secondary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

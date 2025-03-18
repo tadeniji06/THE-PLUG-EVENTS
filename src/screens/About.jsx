@@ -182,7 +182,7 @@ const About = () => {
 
   return (
     <section ref={sectionRef} className='py-20 px-4 bg-white'>
-      <div className='max-w-7xl mx-auto'>
+      <div className='max-w-7xl mx-auto mt-8'>
         {/* Section Header */}
         <div className='text-center mb-16'>
           <h2
