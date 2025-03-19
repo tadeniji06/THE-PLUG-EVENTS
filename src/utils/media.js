@@ -1,4 +1,5 @@
 import logo from "../assets/images/logo.jpeg";
+import newLogo from "../assets/newLogo.png";
 
 import hero1 from "../assets/images/hero1.jpg";
 import hero2 from "../assets/images/hero2.jpg";
@@ -26,4 +27,5 @@ export {
   owoh,
   logoH,
   GP,
+  newLogo,
 };

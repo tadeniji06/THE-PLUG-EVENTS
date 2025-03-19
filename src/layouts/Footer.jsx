@@ -4,7 +4,7 @@ import {
   NewsLetter,
   navLinks,
 } from "../utils/constants";
-import { logo } from "../utils/media";
+import { logo, newLogo } from "../utils/media";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 

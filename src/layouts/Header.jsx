@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { logo } from "../utils/media";
+import { logo, newLogo } from "../utils/media";
 import { Link, useLocation } from "react-router-dom";
 import { navLinks } from "../utils/constants";
 import gsap from "gsap";
@@ -103,7 +103,7 @@ const Header = () => {
           <div className="w-[150px] h-[60px] cursor-pointer transition-transform duration-300 hover:scale-105">
             <img
               className="w-full h-full object-contain"
-              src={logo}
+              src={newLogo}
               alt="The Plug Events Logo"
             />
           </div>
