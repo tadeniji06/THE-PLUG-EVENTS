@@ -194,7 +194,9 @@ const About = () => {
           </h2>
           <p className='text-gray-600 max-w-3xl mx-auto mt-4'>
             We are passionate about creating unforgettable experiences and
-            delivering excellence in every event we plan.
+            delivering excellence in every event we excellence in every
+            event we handle. At Plug Events "Every detail,
+            Perfectly planned"..
           </p>
         </div>
 

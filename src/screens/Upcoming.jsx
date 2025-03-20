@@ -312,13 +312,14 @@ const Upcoming = () => {
           <div className='grid grid-cols-1 md:grid-cols-3 gap-10 items-center'>
             <div className='md:col-span-2'>
               <h3 className='text-3xl font-bold mb-4'>
-                Join Our Event Community
+                Join Our Community
               </h3>
               <p className='text-white/90 mb-6 text-lg'>
-                Stay updated with exclusive content, early bird tickets,
-                and connect with fellow event enthusiasts. Join our
-                WhatsApp community for real-time updates and special
-                offers.
+                Be Part of the Experience! Stay ahead with exclusive
+                updates, early access to tickets, and special offers.
+                Connect with like-minded event enthusiasts and never miss
+                out on the latest happenings. Join our WhatsApp community
+                today for real-time updates and VIP perks!
               </p>
 
               <div className='flex flex-wrap gap-4'>

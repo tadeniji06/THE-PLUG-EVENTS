@@ -21,31 +21,31 @@ export const navLinks = [
   },
 ];
 export const socialLinks = [
-  {
-    name: "Facebook",
-    icon: "mdi:facebook",
-    path: "/",
-  },
+  // {
+  //   name: "Facebook",
+  //   icon: "mdi:facebook",
+  //   path: "/",
+  // },
   {
     name: "Instagram",
     icon: "mdi:instagram",
-    path: "/",
+    path: "https://www.instagram.com/events_by_plugent?igsh=YzljYTk1ODg3Zg==",
   },
   {
     name: "Twitter",
     icon: "mdi:twitter",
-    path: "/",
+    path: "https://x.com/plug_events_?t=_btutcZ6takVCg5YYVWFXg&s=09",
   },
   {
-    name: "LinkedIn",
-    icon: "mdi:linkedin",
-    path: "/",
+    name: "TikTok",
+    icon: "ic:baseline-tiktok",
+    path: "https://www.tiktok.com/@plug_events?_r=1&_d=ei83d8fi9988b4&sec_uid=MS4wLjABAAAAdA_kajsmCu9JZWAgMC5SYrvL6_fr-mN7pWIprp18NC9o_j_lCHdltNWnbC44VX6t&share_author_id=7353031965665575941&sharer_language=en&source=h5_m&u_code=ei83dj94j985ke&timestamp=1742486643&user_id=7458743998737662981&sec_user_id=MS4wLjABAAAAqIqWR3zR1eyz0flI6YzdkdmHzZUev_F20TSUIg1o8dgDl1o8_MwaXRtWfa05URYJ&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7477593303061300999&share_link_id=43a7c4d7-8d58-46ab-85ef-dc17ed2fde2c&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b7200%2Cb5836&social_share_type=5&enable_checksum=1",
   },
-  {
-    name: "YouTube",
-    icon: "mdi:youtube",
-    path: "/",
-  },
+  // {
+  //   name: "YouTube",
+  //   icon: "mdi:youtube",
+  //   path: "/",
+  // },
 ];
 
 export const AboutUs = [
@@ -62,7 +62,7 @@ export const NewsLetter = [
 
 export const aim = [
   {
-    body: "In Africa's dynamic event industry, Plug Events stands out as the premier option offering unmatched events and comprehensive features for organizers and attendees across the continent..",
+    body: `At Plug Events, we set the standard for excellence in Africa’s dynamic event industry. We deliver unparalleled event experiences with innovative solutions, ensuring seamless execution for organizers and unforgettable moments for attendees across the continent.`,
   },
 ];
 
@@ -70,7 +70,7 @@ export const features = [
   {
     title: "Excellent Track Records",
     description:
-      "We offer the best service obtainable to all our numerous clients since March 2018.",
+      "We offer the best service obtainable to all our numerous clients since March 2018 till date.",
     icon: "carbon:chart-line-data",
   },
   {
@@ -82,7 +82,7 @@ export const features = [
   {
     title: "Highest Standards",
     description:
-      "Getting the best possible results is the least you can always expect from us.",
+      "Delivering outstanding results is our minimum standard. With our Team of Talented individuals in their various Areas of Expertise, You can always expect top-tier project execution and professionalism from us.",
     icon: "fa-solid:award",
   },
 ];

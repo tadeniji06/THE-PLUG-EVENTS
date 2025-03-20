@@ -17,8 +17,8 @@ const Stats = () => {
 
   // Target values for counters
   const targetCounts = {
-    projects: 50,
-    attendees: 50000,
+    projects: 30,
+    attendees: 40000,
     clients: 40,
     years: 6,
   };
