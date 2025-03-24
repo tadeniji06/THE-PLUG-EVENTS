@@ -131,7 +131,7 @@ const Header = () => {
             to="/appointment"
             className="ml-4 font-semibold px-5 py-2.5 bg-gradient-secondary text-white rounded-lg shadow-md hover:shadow-lg transform hover:translate-y-[-2px] transition-all duration-300 flex items-center"
           >
-            Book Appointment
+          Make Enquiry
             <Icon icon="material-symbols:arrow-forward-rounded" className="ml-1" />
           </Link>
         </div>
@@ -186,7 +186,7 @@ const Header = () => {
               className="mobile-menu-item mt-6 font-semibold px-5 py-3 bg-gradient-primary text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-center"
               onClick={toggleMenu}
             >
-              Book Appointment
+              Make Enquiry
             </Link>
             
             {/* Social Media Links */}

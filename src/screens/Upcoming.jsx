@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icon } from "@iconify/react";
-import { Arena, IgboAmaka, GrandFiesta } from "../utils/media";
-import QRCode from "react-qr-code"; // You may need to install this package
+import QRCode from "react-qr-code";
+import { eventsData } from "../utils/events"; // Import the events data
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -17,48 +17,22 @@ const Upcoming = () => {
   const communityRef = useRef(null);
   const [daysLeft, setDaysLeft] = useState({});
 
-  // Upcoming events data
-  const upcomingEvents = [
-    {
-      id: 1,
-      title: "Igbo Amaka Festival",
-      date: "2025-04-13",
-      time: "12:00 PM",
-      location: "Lagos Cultural Center",
-      image: IgboAmaka,
-      category: "Cultural",
-      price: "₦5,000",
-      description:
-        "A celebration of Igbo culture featuring traditional music, dance, and cuisine. Join us for this immersive cultural experience.",
-      ticketLink: "/tickets/igbo-amaka",
-    },
-    {
-      id: 2,
-      title: "Grand Fiesta",
-      date: "2024-11-28",
-      time: "8:00 PM",
-      location: "Beachfront Resort",
-      image: GrandFiesta,
-      category: "Party",
-      price: "₦10,000",
-      description:
-        "An exclusive beach party with top DJs, gourmet food, and spectacular fireworks. The most anticipated end-of-year celebration.",
-      ticketLink: "/tickets/grand-fiesta",
-    },
-    {
-      id: 3,
-      title: "Arena Concert Series",
-      date: "2025-02-14",
-      time: "7:00 PM",
-      location: "National Stadium",
-      image: Arena,
-      category: "Concert",
-      price: "₦7,500 - ₦25,000",
-      description:
-        "A night of unforgettable performances from both local and international artists. Valentine's special edition.",
-      ticketLink: "/tickets/arena-concert",
-    },
-  ];
+  // Use the imported eventsData instead of hardcoded data
+  // Filter and sort events to show upcoming ones
+  const upcomingEvents = eventsData
+    .map(event => ({
+      id: event.id,
+      title: event.title,
+      date: event.date,
+      time: event.time,
+      location: event.location,
+      image: event.image,
+      category: event.category,
+      price: event.price,
+      description: event.description,
+      ticketLink: `/tickets/${event.id}`,
+    }))
+    .sort((a, b) => new Date(a.date) - new Date(b.date));
 
   // Calculate days left for each event
   useEffect(() => {
@@ -89,7 +63,7 @@ const Upcoming = () => {
     const interval = setInterval(calculateDaysLeft, 86400000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, []); // Removed upcomingEvents from dependency array
 
   // Animations
   useEffect(() => {
@@ -140,21 +114,23 @@ const Upcoming = () => {
 
     // Event card animations
     eventRefs.current.forEach((card, index) => {
-      gsap.fromTo(
-        card,
-        { y: 50, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          delay: 0.3 + index * 0.2,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: card,
-            start: "top 85%",
-          },
-        }
-      );
+      if (card) { // Add null check
+        gsap.fromTo(
+          card,
+          { y: 50, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            delay: 0.3 + index * 0.2,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 85%",
+            },
+          }
+        );
+      }
     });
 
     // Community section animation
@@ -319,7 +295,7 @@ const Upcoming = () => {
                 updates, early access to tickets, and special offers.
                 Connect with like-minded event enthusiasts and never miss
                 out on the latest happenings. Join our WhatsApp community
-                today for real-time updates and VIP perks!
+                today for real-time updates and VIP perks!
               </p>
 
               <div className='flex flex-wrap gap-4'>

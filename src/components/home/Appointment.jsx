@@ -148,7 +148,7 @@ const Appointment = () => {
   return (
     <section
       ref={sectionRef}
-      className='py-20 px-4 bg-gradient-primary text-neutral-800'
+      className='mt-20 py-20 px-4 bg-gradient-primary text-neutral-800'
     >
       <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-12'>
@@ -435,7 +435,7 @@ const Appointment = () => {
                     </span>
                   ) : (
                     <span className='flex items-center justify-center'>
-                      Book Appointment
+                      Make Enquiry
                       <Icon
                         icon='material-symbols:arrow-forward-rounded'
                         className='ml-2'

@@ -41,10 +41,10 @@ const router = createBrowserRouter([
         path: "/appointment",
         element: <AppointmentPage />,
       },
-      {
-        path: "/events/:eventId",
-        element: <Event />,
-      },
+      // {
+      //   path: "/events/:eventId",
+      //   element: <Event />,
+      // },
       {
         path: "/tickets/:eventId",
         element: <Event />,

@@ -2,10 +2,9 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Arena, IgboAmaka, GrandFiesta } from "../../utils/media";
 import { Icon } from "@iconify/react";
+import { eventsData } from "../../utils/events";
 
-// Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const RecentEvents = () => {
@@ -15,41 +14,10 @@ const RecentEvents = () => {
   const cardsRef = useRef([]);
   const buttonRef = useRef(null);
 
-  const recentEvents = [
-    {
-      id: 1,
-      title: "Igbo Amaka Festival",
-      date: "13 April 2025",
-      location: "Lagos Cultural Center",
-      image: IgboAmaka,
-      category: "Cultural",
-      attendees: 1200,
-      description:
-        "A celebration of Igbo culture featuring traditional music, dance, and cuisine.",
-    },
-    {
-      id: 2,
-      title: "Grand Fiesta",
-      date: "28 Nov 2024",
-      location: "Beachfront Resort",
-      image: GrandFiesta,
-      category: "Party",
-      attendees: 850,
-      description:
-        "An exclusive beach party with top DJs, gourmet food, and spectacular fireworks.",
-    },
-    {
-      id: 3,
-      title: "Arena Concert Series",
-      date: "14 Feb 2025",
-      location: "National Stadium",
-      image: Arena,
-      category: "Concert",
-      attendees: 5000,
-      description:
-        "A night of unforgettable performances from both local and international artists.",
-    },
-  ];
+  // Get featured events from eventsData or fallback to first 3 events
+  const recentEvents = eventsData
+    .filter(event => event.featured)
+    .slice(0, 3) || eventsData.slice(0, 3);
 
   useEffect(() => {
     // Main section entrance animation
@@ -185,6 +153,16 @@ const RecentEvents = () => {
     };
   }, []);
 
+  // Format date for display
+  const formatEventDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { 
+      day: 'numeric', 
+      month: 'long', 
+      year: 'numeric' 
+    });
+  };
+
   return (
     <section
       ref={sectionRef}
@@ -235,9 +213,9 @@ const RecentEvents = () => {
                 {/* Date Badge */}
                 <div className="absolute top-5 left-5 bg-white text-primary-blue-dark text-sm font-bold px-4 py-1.5 rounded-full flex items-center shadow-md">
                   <Icon icon="mdi:calendar" className="mr-1.5" />
-                  {event.date}
+                  {formatEventDate(event.date)}
                 </div>
-                
+               
                 {/* Event Title on Image */}
                 <div className="absolute bottom-5 left-5 right-5">
                   <h3 className="text-2xl font-bold mb-2 text-white">
@@ -255,15 +233,17 @@ const RecentEvents = () => {
                 <p className="text-neutral-700 mb-6 line-clamp-3">{event.description}</p>
 
                 <div className="flex justify-between items-center">
-                  <div className="flex items-center text-neutral-600">
-                    <Icon icon="mdi:account-group" className="mr-1.5 text-lg" />
-                    <span className="font-medium">
-                      {event.attendees.toLocaleString()} Attendees
-                    </span>
-                  </div>
+                  {event.ticketTypes && (
+                    <div className="flex items-center text-neutral-600">
+                      <Icon icon="mdi:ticket" className="mr-1.5 text-lg" />
+                      <span className="font-medium">
+                        From {event.ticketTypes[0]?.price || event.price}
+                      </span>
+                    </div>
+                  )}
 
                   <Link
-                    to={`/events/${event.id}`}
+                    to={`/tickets/${event.id}`}
                     className="text-primary-blue font-semibold flex items-center hover:text-primary-blue-dark transition-colors duration-300 group"
                   >
                     View Details
@@ -303,7 +283,7 @@ const RecentEvents = () => {
             transform: scaleX(1);
           }
         }
-        
+       
         .animate-expandWidth {
           animation: expandWidth 1.5s forwards 0.5s;
         }

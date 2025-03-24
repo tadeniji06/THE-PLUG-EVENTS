@@ -3,8 +3,8 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icon } from "@iconify/react";
-import { Arena, IgboAmaka, GrandFiesta } from "../../utils/media";
 import QRCode from "react-qr-code";
+import { eventsData } from "../../utils/events";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -24,232 +24,13 @@ const Event = () => {
   const ticketsRef = useRef(null);
   const relatedRef = useRef(null);
 
-  // Mock events data - in a real app, you would fetch this from an API
-  const eventsData = [
-    {
-      id: "igbo-amaka",
-      title: "Igbo Amaka Festival",
-      date: "2025-04-13",
-      time: "12:00 PM",
-      endTime: "10:00 PM",
-      location: "Lagos Cultural Center",
-      address: "123 Cultural Avenue, Lagos Island, Lagos",
-      image: IgboAmaka,
-      gallery: [IgboAmaka, Arena, GrandFiesta],
-      category: "Cultural",
-      price: "₦5,000",
-      description:
-        "A celebration of Igbo culture featuring traditional music, dance, and cuisine. Join us for this immersive cultural experience.",
-      longDescription: `
-        <p>The Igbo Amaka Festival is a vibrant celebration of Igbo culture, traditions, and heritage. This day-long event brings together people from all walks of life to experience the rich cultural tapestry of the Igbo people.</p>
-        
-        <p>Attendees will enjoy:</p>
-        <ul>
-          <li>Traditional Igbo music and dance performances</li>
-          <li>Authentic Igbo cuisine and food demonstrations</li>
-          <li>Cultural exhibitions and art displays</li>
-          <li>Traditional fashion showcase</li>
-          <li>Interactive workshops on Igbo language and customs</li>
-        </ul>
-        
-        <p>This festival is perfect for families, cultural enthusiasts, and anyone interested in experiencing the vibrant traditions of the Igbo people. Don't miss this opportunity to immerse yourself in one of Nigeria's most celebrated cultures.</p>
-      `,
-      organizer: "Cultural Heritage Foundation",
-      ticketTypes: [
-        {
-          name: "Standard",
-          price: "₦5,000",
-          description: "General admission",
-        },
-        {
-          name: "VIP",
-          price: "₦15,000",
-          description:
-            "Priority seating, exclusive lounge access, and complimentary refreshments",
-        },
-        {
-          name: "Family Pack",
-          price: "₦18,000",
-          description: "Admission for 2 adults and 2 children (under 12)",
-        },
-      ],
-      features: [
-        { icon: "mdi:food", text: "Traditional Cuisine" },
-        { icon: "mdi:music", text: "Live Performances" },
-        { icon: "mdi:account-group", text: "Cultural Workshops" },
-        { icon: "mdi:shopping", text: "Artisan Market" },
-      ],
-      faqs: [
-        {
-          question: "Is the event family-friendly?",
-          answer:
-            "Yes, the Igbo Amaka Festival is designed for all ages with activities for children and adults alike.",
-        },
-        {
-          question: "Are there food options available?",
-          answer:
-            "Yes, there will be various food vendors offering traditional Igbo cuisine as well as other Nigerian dishes.",
-        },
-        {
-          question: "What should I wear?",
-          answer:
-            "While there's no strict dress code, attendees are encouraged to wear traditional Igbo attire to fully embrace the cultural experience.",
-        },
-      ],
-    },
-    {
-      id: "grand-fiesta",
-      title: "Grand Fiesta",
-      date: "2024-11-28",
-      time: "8:00 PM",
-      endTime: "4:00 AM",
-      location: "Beachfront Resort",
-      address: "Beachfront Resort, Victoria Island, Lagos",
-      image: GrandFiesta,
-      gallery: [GrandFiesta, IgboAmaka, Arena],
-      category: "Party",
-      price: "₦10,000",
-      description:
-        "An exclusive beach party with top DJs, gourmet food, and spectacular fireworks. The most anticipated end-of-year celebration.",
-      longDescription: `
-        <p>Grand Fiesta is the ultimate beach party experience, bringing together the best music, food, and entertainment for an unforgettable night under the stars.</p>
-        
-        <p>What to expect:</p>
-        <ul>
-          <li>World-class DJs spinning the latest hits</li>
-          <li>Gourmet food stations with international cuisine</li>
-          <li>Premium open bar with signature cocktails</li>
-          <li>Spectacular fireworks display at midnight</li>
-          <li>Exclusive VIP areas with bottle service</li>
-        </ul>
-        
-        <p>This is the most anticipated end-of-year celebration, perfect for those looking to dance the night away in a luxurious beachfront setting. Dress to impress and prepare for a night of non-stop entertainment.</p>
-      `,
-      organizer: "Luxury Events Nigeria",
-      ticketTypes: [
-        {
-          name: "Standard",
-          price: "₦10,000",
-          description: "General admission",
-        },
-        {
-          name: "VIP",
-          price: "₦25,000",
-          description:
-            "VIP area access, complimentary drinks, and express entry",
-        },
-        {
-          name: "VVIP",
-          price: "₦50,000",
-          description:
-            "Exclusive beachfront cabana, premium bottle service, and personal attendant",
-        },
-      ],
-      features: [
-        { icon: "mdi:music", text: "Top DJs" },
-        { icon: "mdi:food-variant", text: "Gourmet Food" },
-        { icon: "mdi:glass-cocktail", text: "Premium Bar" },
-        { icon: "mdi:firework", text: "Fireworks Show" },
-      ],
-      faqs: [
-        {
-          question: "What is the dress code?",
-          answer:
-            "The dress code is upscale beach party attire. Think stylish resort wear with a touch of glamour.",
-        },
-        {
-          question: "Is there parking available?",
-          answer:
-            "Yes, complimentary valet parking is available for all guests.",
-        },
-        {
-          question: "What time do the fireworks start?",
-          answer:
-            "The fireworks display is scheduled for midnight, weather permitting.",
-        },
-      ],
-    },
-    {
-      id: "arena-concert",
-      title: "Arena Concert Series",
-      date: "2025-02-14",
-      time: "7:00 PM",
-      endTime: "11:00 PM",
-      location: "National Stadium",
-      address: "National Stadium, Surulere, Lagos",
-      image: Arena,
-      gallery: [Arena, GrandFiesta, IgboAmaka],
-      category: "Concert",
-      price: "₦7,500 - ₦25,000",
-      description:
-        "A night of unforgettable performances from both local and international artists. Valentine's special edition.",
-      longDescription: `
-        <p>The Arena Concert Series returns with a special Valentine's Day edition, featuring an incredible lineup of both local and international artists for a night of unforgettable music.</p>
-        
-        <p>This year's lineup includes:</p>
-        <ul>
-          <li>Grammy-winning international headliner (to be announced)</li>
-          <li>Top Nigerian artists and bands</li>
-          <li>Emerging talent showcase</li>
-          <li>Special Valentine's themed performances</li>
-        </ul>
-        
-        <p>Whether you're celebrating with a loved one or coming with friends, this concert promises to be the highlight of your Valentine's Day. With state-of-the-art sound and lighting, the Arena Concert Series delivers a world-class concert experience right here in Lagos.</p>
-      `,
-      organizer: "Soundwave Productions",
-      ticketTypes: [
-        {
-          name: "Regular",
-          price: "₦7,500",
-          description: "General admission standing",
-        },
-        {
-          name: "Premium",
-          price: "₦15,000",
-          description: "Seated area with good views",
-        },
-        {
-          name: "Gold",
-          price: "₦25,000",
-          description:
-            "Front section seating with exclusive merchandise pack",
-        },
-      ],
-      features: [
-        { icon: "mdi:account-music", text: "Live Performances" },
-        { icon: "mdi:speaker", text: "Premium Sound" },
-        { icon: "mdi:spotlight", text: "Light Show" },
-        { icon: "mdi:gift", text: "Valentine's Special" },
-      ],
-      faqs: [
-        {
-          question: "Can I bring my camera?",
-          answer:
-            "Small personal cameras are allowed, but professional photography equipment requires press credentials.",
-        },
-        {
-          question: "What time do doors open?",
-          answer:
-            "Doors open at 5:30 PM, two hours before the show starts.",
-        },
-        {
-          question: "Is there a bag policy?",
-          answer:
-            "Yes, bags larger than 12x12 inches are not permitted. All bags will be subject to search.",
-        },
-      ],
-    },
-  ];
-
   // Find the event based on the eventId parameter
   useEffect(() => {
-    // In a real app, you would fetch the event data from an API
     const foundEvent = eventsData.find((e) => e.id === eventId);
 
     if (foundEvent) {
       setEvent(foundEvent);
     } else {
-      // If event not found, redirect to events page
       navigate("/events");
     }
 
@@ -374,6 +155,14 @@ const Event = () => {
     return eventsData.filter((e) => e.id !== event.id).slice(0, 2);
   };
 
+  // disable book ticket for past events
+  const isPastEvent = () => {
+    if (!event) return false;
+    const eventDate = new Date(event.date);
+    const currentDate = new Date();
+    return eventDate < currentDate;
+  };
+
   if (loading) {
     return (
       <div className='min-h-screen flex items-center justify-center'>
@@ -490,28 +279,6 @@ const Event = () => {
                       <Icon icon={feature.icon} className='text-3xl' />
                     </div>
                     <span className='font-medium'>{feature.text}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Event Gallery */}
-            <div className='bg-white rounded-2xl shadow-md p-8 mb-10'>
-              <h2 className='text-2xl font-bold mb-6 text-primary-blue-dark'>
-                Event Gallery
-              </h2>
-
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-                {event.gallery.map((image, index) => (
-                  <div
-                    key={index}
-                    className='rounded-lg overflow-hidden h-48 transition-transform duration-300 hover:scale-105'
-                  >
-                    <img
-                      src={image}
-                      alt={`${event.title} gallery ${index + 1}`}
-                      className='w-full h-full object-cover'
-                    />
                   </div>
                 ))}
               </div>
@@ -639,25 +406,26 @@ const Event = () => {
                     ₦{calculateTotal().toLocaleString()}
                   </span>
                 </div>
-                <div className='flex justify-between items-center mb-2'>
-                  <span className='text-neutral-600'>Booking Fee</span>
-                  <span className='font-medium'>
-                    ₦{(calculateTotal() * 0.05).toLocaleString()}
-                  </span>
-                </div>
                 <div className='flex justify-between items-center text-lg font-bold mt-4'>
                   <span>Total</span>
-                  <span>
-                    ₦{(calculateTotal() * 1.05).toLocaleString()}
-                  </span>
+                  <span>₦{calculateTotal().toLocaleString()}</span>
                 </div>
               </div>
 
               {/* Book Now Button */}
-              <button className='w-full bg-gradient-secondary hover:shadow-lg text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center transform hover:translate-y-[-2px]'>
-                Book Now
-                <Icon icon='mdi:ticket' className='ml-2 text-xl' />
-              </button>
+              {isPastEvent() ? (
+                <button
+                  className='w-full bg-neutral-200 text-neutral-600 font-bold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center transform hover:translate-y-[-2px]'
+                  disabled
+                >
+                  Event Passed
+                </button>
+              ) : (
+                <button className='w-full bg-gradient-secondary hover:shadow-lg text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center transform hover:translate-y-[-2px]'>
+                  Book Now
+                  <Icon icon='mdi:ticket' className='ml-2 text-xl' />
+                </button>
+              )}
 
               {/* WhatsApp Community */}
               <div className='mt-8 pt-8 border-t border-neutral-200'>

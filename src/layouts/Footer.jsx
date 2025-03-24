@@ -121,8 +121,13 @@ const Footer = () => {
         <div className='mt-12 pt-4 border-t border-blue-400 text-center'>
           <p>
             © Copyright {year} | All Rights Reserved by{" "}
-            <a href='/' className='font-bold hover:underline'>
-              The Plug Events
+            <a
+              href='https://adnom.netlify.app'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='font-bold hover:underline'
+            >
+              Adnom
             </a>
           </p>
         </div>

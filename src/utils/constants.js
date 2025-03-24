@@ -114,22 +114,22 @@ Embark on unforgettable journeys with Plug Events, your premier tour partner for
     image:
       "https://images.unsplash.com/photo-1527224857830-43a7acc85260?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
-  {
-    title: "BUSINESS",
-    description: `Elevate your professional network and stay ahead of the curve with Plug Events' business conferences, seminars, and workshops!`,
-    icon: "mdi:briefcase",
-    color: "bg-blue-500",
-    image:
-      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "SPORT",
-    description: `Experience the thrill of competition and camaraderie in the world of sports, tournaments, and activities with Plug Events`,
-    icon: "mdi:basketball",
-    color: "bg-green-500",
-    image:
-      "https://images.unsplash.com/photo-1471295253337-3ceaaedca402?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-  },
+  // {
+  //   title: "BUSINESS",
+  //   description: `Elevate your professional network and stay ahead of the curve with Plug Events' business conferences, seminars, and workshops!`,
+  //   icon: "mdi:briefcase",
+  //   color: "bg-blue-500",
+  //   image:
+  //     "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  // },
+  // {
+  //   title: "SPORT",
+  //   description: `Experience the thrill of competition and camaraderie in the world of sports, tournaments, and activities with Plug Events`,
+  //   icon: "mdi:basketball",
+  //   color: "bg-green-500",
+  //   image:
+  //     "https://images.unsplash.com/photo-1471295253337-3ceaaedca402?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  // },
   {
     title: "WEDDING",
     description: `From intimate gatherings to grand affairs, we'll help you create a wedding that reflects your romantic unique love story.`,

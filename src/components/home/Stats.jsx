@@ -19,7 +19,7 @@ const Stats = () => {
   const targetCounts = {
     projects: 30,
     attendees: 40000,
-    clients: 40,
+    clients: 22,
     years: 6,
   };
 
