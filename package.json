@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@paystack/inline-js": "^2.22.2",
     "gsap": "^3.12.7",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-paystack": "^6.0.0",
     "react-qr-code": "^2.0.15",
     "react-router-dom": "^7.3.0"
   },

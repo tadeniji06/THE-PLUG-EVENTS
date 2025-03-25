@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icon } from "@iconify/react";
 import QRCode from "react-qr-code";
 import { eventsData } from "../../utils/events";
+import { processPayment, generateReference } from "../../services/payment";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -23,6 +24,42 @@ const Event = () => {
   const detailsRef = useRef(null);
   const ticketsRef = useRef(null);
   const relatedRef = useRef(null);
+
+  const [email, setEmail] = useState("");
+  const [showPaymentForm, setShowPaymentForm] = useState(false);
+  const [paymentComplete, setPaymentComplete] = useState(false);
+  const [paymentReference, setPaymentReference] = useState("");
+
+  // Define these functions in your component
+  const handlePaymentSuccess = (transaction) => {
+    console.log("Payment successful", transaction);
+    setPaymentComplete(true);
+    setPaymentReference(transaction.reference);
+
+    // Store ticket information in localStorage
+    const ticketInfo = {
+      eventId: event.id,
+      eventName: event.title,
+      ticketType: selectedTicketType,
+      quantity: ticketQuantity,
+      reference: transaction.reference,
+      purchaseDate: new Date().toISOString(),
+      email: email,
+    };
+
+    const existingTickets = JSON.parse(
+      localStorage.getItem("userTickets") || "[]"
+    );
+    localStorage.setItem(
+      "userTickets",
+      JSON.stringify([...existingTickets, ticketInfo])
+    );
+  };
+
+  const handlePaymentClose = () => {
+    console.log("Payment closed");
+    setShowPaymentForm(false);
+  };
 
   // Find the event based on the eventId parameter
   useEffect(() => {
@@ -420,8 +457,83 @@ const Event = () => {
                 >
                   Event Passed
                 </button>
+              ) : paymentComplete ? (
+                <div className='bg-green-50 border border-green-200 rounded-xl p-6 text-center'>
+                  <Icon
+                    icon='mdi:check-circle'
+                    className='text-green-500 text-5xl mb-3'
+                  />
+                  <h3 className='text-xl font-bold text-green-700 mb-2'>
+                    Payment Successful!
+                  </h3>
+                  <p className='text-green-600 mb-4'>
+                    Your ticket has been booked successfully.
+                  </p>
+                  <p className='text-sm text-neutral-600 mb-4'>
+                    Reference: {paymentReference}
+                  </p>
+                  <button
+                    onClick={() => setPaymentComplete(false)}
+                    className='bg-gradient-primary text-white font-bold py-3 px-6 rounded-lg transition-all duration-300'
+                  >
+                    Book Another Ticket
+                  </button>
+                </div>
+              ) : showPaymentForm ? (
+                <div className='space-y-4'>
+                  <div>
+                    <label className='block text-neutral-700 font-medium mb-2'>
+                      Email Address
+                    </label>
+                    <input
+                      type='email'
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className='w-full p-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue'
+                      placeholder='Enter your email'
+                      required
+                    />
+                  </div>
+
+                  {email && email.includes("@") ? (
+                    <button
+                      onClick={() => {
+                        processPayment({
+                          amount: calculateTotal(),
+                          email: email,
+                          reference: generateReference(),
+                          eventName: event.title,
+                          ticketType: selectedTicketType,
+                          quantity: ticketQuantity,
+                          onSuccess: handlePaymentSuccess,
+                          onClose: handlePaymentClose,
+                        });
+                      }}
+                      className='w-full bg-gradient-secondary hover:shadow-lg text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center transform hover:translate-y-[-2px]'
+                    >
+                      Pay Now
+                    </button>
+                  ) : (
+                    <button
+                      disabled
+                      className='w-full bg-neutral-300 text-neutral-500 font-bold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center'
+                    >
+                      Enter valid email to continue
+                    </button>
+                  )}
+
+                  <button
+                    onClick={() => setShowPaymentForm(false)}
+                    className='w-full bg-neutral-200 text-neutral-700 font-bold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center'
+                  >
+                    Cancel
+                  </button>
+                </div>
               ) : (
-                <button className='w-full bg-gradient-secondary hover:shadow-lg text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center transform hover:translate-y-[-2px]'>
+                <button
+                  onClick={() => setShowPaymentForm(true)}
+                  className='w-full bg-gradient-secondary hover:shadow-lg text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center transform hover:translate-y-[-2px]'
+                >
                   Book Now
                   <Icon icon='mdi:ticket' className='ml-2 text-xl' />
                 </button>
@@ -433,7 +545,7 @@ const Event = () => {
                   Join Event Community
                 </h3>
                 <a
-                  href={event. whatsAppLink}
+                  href={event.whatsAppLink}
                   target='_blank'
                   rel='noopener noreferrer'
                   className='w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center'
