@@ -17,7 +17,7 @@ const Hero = () => {
       image: event.image,
       id: event.id,
       title: event.title,
-      description: event.shortDescription || event.description,
+      description: event.shortDescription,
       ticketLink: `/tickets/${event.id}`
     }));
 

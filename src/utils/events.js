@@ -6,6 +6,7 @@ export const eventsData = [
     title: "Igbo Amaka Festival",
     description:
       "Celebrate the rich cultural heritage of the Igbo people with traditional music, dance, and cuisine.",
+      shortDescription: "Celebrate the rich cultural heritage of the Igbo people with traditional music, dance, and cuisine.",  
     longDescription: `
       <p>Igbo Amaka Festival is a celebration of the rich cultural heritage of the Igbo people, showcasing traditional music, dance, art, and cuisine.</p>
       <p>This immersive cultural experience includes:</p>
@@ -95,6 +96,7 @@ export const eventsData = [
     id: "arena-experience",
     title: "Echoes Of Love",
     description: `ECHOES OF LOVE 2025 is thrilled to announce its the take off, happening on February 14th, 2025! In City Of UYO and February 15th 2025, in city of Calabar. Echoes of Love features live performances, giveaways, comedy and lots more, join us for an electrifying evening of music, dance, and love under the stars!`,
+    shortDescription:"A sense of longing, nostalgia and deep emotional connection of love, heartbreak and relationships",
     longDescription: `
       <p> Experience an immersive concert event featuring top artists and state-of-the-art production, creating an unforgettable night of music and entertainment.</p>
       <p>What makes this event special:</p>
@@ -157,6 +159,7 @@ export const eventsData = [
   {
     id: "block-party-2024",
     title: "The Block Fiesta",
+    shortDescription:"High energy, vibrant atmosphere...we go block for block fiesta",
     description: `THE BLOCK FIESTA" is a recurring event that takes place in Calabar, Nigeria, specifically at the Municipal Garden, Marian. It is a vibrant and recurring social event that contributes to the  entertainment scene in Calabar that brings people together for a memorable experience!`,
     longDescription: `
       <p>Block Party 2024 brings the community together for a day of celebration with music, food, games, and good vibes on the streets of Lagos.</p>
