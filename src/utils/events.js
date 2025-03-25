@@ -1,4 +1,4 @@
-import { Arena, GrandFiesta, IgboAmaka, Block, NF, hero3 } from "./media";
+import { Arena, GrandFiesta, IgboAmaka, Block, NF, hero3, CGF } from "./media";
 
 export const eventsData = [
   {
@@ -42,20 +42,20 @@ export const eventsData = [
           "Purchase 1 VIP ticket and get a free plate of abacha",
       },
       {
-        name: "Lounge",
+        name: "Table for 4",
         price: "₦200,000",
         description:
-          "6 persons - 1 champagne, 1 shisha, mixers, 4 plates of indigenous Igbo delicacy ",
+          "1 champagne, 1 shisha, mixers, 4 plates of indigenous Igbo delicacy",
       },
       {
-        name: "Table",
+        name: "Table for 8",
         price: "₦500,000",
         description: `1 Martell blue swift, 1 champagne, 2 shisha, mixers, 10 plates of indigenous Igbo delicacy `,
       },
       {
-        name: "Super Table",
-        price: "₦500,000",
-        description: `2 Bellaire, 1 Martell blue swift, 1 Hennessy vsop, 3 shisha, mixers, 10 plates of indigenous Igbo delicacy `,
+        name: "Table for 10",
+        price: "₦1,000,000",
+        description: `1 Martell blue swift, 1 champagne, 2 shisha, mixers, 10 plates of indigenous Igbo delicacy  `,
       },
     ],
     features: [
@@ -89,7 +89,7 @@ export const eventsData = [
     organizer: "plug event, blaze ent, events by Adnom",
     whatsAppLink: "https://chat.whatsapp.com/Frm5qlLussrK1XSFVIupex",
     organizerLink:
-      "https://wa.me/+2348123456789?text=I'm%20interested%20in%20your%20event",
+      "https://wa.me/+2347026305079?text=I'm%20interested%20in%20your%20event",
   },
 
   {
@@ -330,7 +330,7 @@ Enjoy a fun-filled afternoon of steel drum beats, delicious island eats, and ref
     address: "",
     price: "₦1,500",
     category: "Picnic",
-    image: hero3,
+    image:GrandFiesta,
     featured: false,
     ticketTypes: [
       {

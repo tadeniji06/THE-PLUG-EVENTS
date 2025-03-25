@@ -27,7 +27,8 @@ import Fidelity from "../assets/images/Brands/Fidelity.jpg";
 import MTN from "../assets/images/Brands/MTN.jpg";
 import Opay from "../assets/images/Brands/Opay.jpg";
 import SS from "../assets/images/Brands/SS.jpg";
-import Trace from "../assets/images/Brands/Trace.jpg";  
+import Trace from "../assets/images/Brands/Trace.jpg";
+import CGF from "../assets/images/CGF.jpg";
 
 export {
   logo,
@@ -54,5 +55,6 @@ export {
   MTN,
   Opay,
   SS,
-  Trace
+  Trace,
+  CGF,
 };
