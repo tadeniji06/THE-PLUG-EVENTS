@@ -30,7 +30,7 @@ const About = () => {
       },
     },
     {
-      name: "GODSPOWER ADEDE",
+      name: "GODSPOWER EDEDE",
       position: "MANAGER AND HEAD OF DEVELOPER",
       description: "Some text that describes me lorem ipsum ipsum lorem.",
       image: GP,
