@@ -19,7 +19,7 @@ const Brands = () => {
     const scrollTween = gsap.to(scrollerRef.current, {
       x: `-50%`,
       ease: "none",
-      duration: 20,
+      duration: 5,
       repeat: -1, // Infinite repeat
       paused: true
     });
