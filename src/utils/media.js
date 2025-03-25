@@ -23,6 +23,11 @@ import Indomie from "../assets/images/Brands/Indomie.jpg";
 import PayKode from "../assets/images/Brands/PayKode.jpg";
 import teez from "../assets/images/Brands/teez.jpg";
 import torley from "../assets/images/Brands/torley.jpg";
+import Fidelity from "../assets/images/Brands/Fidelity.jpg";
+import MTN from "../assets/images/Brands/MTN.jpg";
+import Opay from "../assets/images/Brands/Opay.jpg";
+import SS from "../assets/images/Brands/SS.jpg";
+import Trace from "../assets/images/Brands/Trace.jpg";  
 
 export {
   logo,
@@ -45,4 +50,9 @@ export {
   PayKode,
   torley,
   teez,
+  Fidelity,
+  MTN,
+  Opay,
+  SS,
+  Trace
 };
