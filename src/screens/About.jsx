@@ -30,7 +30,7 @@ const About = () => {
       },
     },
     {
-      name: "GODSPOWER ANIEKAN",
+      name: "GODSPOWER ADEDE",
       position: "MANAGER AND HEAD OF DEVELOPER",
       description: "Some text that describes me lorem ipsum ipsum lorem.",
       image: GP,
@@ -41,7 +41,7 @@ const About = () => {
       },
     },
     {
-      name: "MITCHY OWOH",
+      name: "MITCHELL OWOH",
       position: "STRATEGIST AND HEAD OF PR",
       description: "Some text that describes me lorem ipsum ipsum lorem.",
       image: owoh,

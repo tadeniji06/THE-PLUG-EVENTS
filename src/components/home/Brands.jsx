@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { CY, Indomie, PayKode, DeRock } from "../../utils/media";
+import { CY, Indomie, PayKode, DeRock, torley, teez } from "../../utils/media";
 
 const Brands = () => {
-  const images = [CY, Indomie, PayKode, DeRock];
+  const images = [CY, Indomie, PayKode, DeRock, torley, teez];
   const containerRef = useRef(null);
   const scrollerRef = useRef(null);
 

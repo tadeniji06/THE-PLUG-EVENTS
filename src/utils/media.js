@@ -21,6 +21,8 @@ import CY from "../assets/images/Brands//CY.jpg";
 import DeRock from "../assets/images/Brands/DeRock.jpg";
 import Indomie from "../assets/images/Brands/Indomie.jpg";
 import PayKode from "../assets/images/Brands/PayKode.jpg";
+import teez from "../assets/images/Brands/teez.jpg";
+import torley from "../assets/images/Brands/torley.jpg";
 
 export {
   logo,
@@ -41,4 +43,6 @@ export {
   DeRock,
   Indomie,
   PayKode,
+  torley,
+  teez,
 };
