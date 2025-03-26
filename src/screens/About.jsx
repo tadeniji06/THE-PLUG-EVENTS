@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Icon } from "@iconify/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { logoH, owoh, GP } from "../utils/media";
+import { logoH, owoh, GPNew } from "../utils/media";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -33,7 +33,7 @@ const About = () => {
       name: "GODSPOWER EDEDE",
       position: "MANAGER AND HEAD OF DEVELOPER",
       description: "Some text that describes me lorem ipsum ipsum lorem.",
-      image: GP,
+      image: GPNew,
       social: {
         twitter: "#",
         linkedin: "#",
@@ -356,7 +356,7 @@ const About = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'
+                    className='w-full h-full object-contain transition-transform duration-500 group-hover:scale-110'
                   />
                   <div className='absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60'></div>
 

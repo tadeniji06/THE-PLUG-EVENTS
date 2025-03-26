@@ -29,6 +29,7 @@ import Opay from "../assets/images/Brands/Opay.jpg";
 import SS from "../assets/images/Brands/SS.jpg";
 import Trace from "../assets/images/Brands/Trace.jpg";
 import CGF from "../assets/images/CGF.jpg";
+import GPNew from "../assets/images/GPNew.jpg";
 
 export {
   logo,
@@ -57,4 +58,5 @@ export {
   SS,
   Trace,
   CGF,
+  GPNew,
 };
