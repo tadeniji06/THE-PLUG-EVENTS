@@ -1,4 +1,12 @@
-import { Arena, GrandFiesta, IgboAmaka, Block, NF, hero3, CGF } from "./media";
+import {
+  Arena,
+  GrandFiesta,
+  IgboAmaka,
+  Block,
+  NF,
+  hero3,
+  CGF,
+} from "./media";
 
 export const eventsData = [
   {
@@ -6,7 +14,8 @@ export const eventsData = [
     title: "Igbo Amaka Festival",
     description:
       "Celebrate the rich cultural heritage of the Igbo people with traditional music, dance, and cuisine.",
-      shortDescription: "Celebrate the rich cultural heritage of the Igbo people with traditional music, dance, and cuisine.",  
+    shortDescription:
+      "Celebrate the rich cultural heritage of the Igbo people with traditional music, dance, and cuisine.",
     longDescription: `
       <p>Igbo Amaka Festival is a celebration of the rich cultural heritage of the Igbo people, showcasing traditional music, dance, art, and cuisine.</p>
       <p>This immersive cultural experience includes:</p>
@@ -96,7 +105,8 @@ export const eventsData = [
     id: "arena-experience",
     title: "Echoes Of Love",
     description: `ECHOES OF LOVE 2025 is thrilled to announce its the take off, happening on February 14th, 2025! In City Of UYO and February 15th 2025, in city of Calabar. Echoes of Love features live performances, giveaways, comedy and lots more, join us for an electrifying evening of music, dance, and love under the stars!`,
-    shortDescription:"A sense of longing, nostalgia and deep emotional connection of love, heartbreak and relationships",
+    shortDescription:
+      "A sense of longing, nostalgia and deep emotional connection of love, heartbreak and relationships",
     longDescription: `
       <p> Experience an immersive concert event featuring top artists and state-of-the-art production, creating an unforgettable night of music and entertainment.</p>
       <p>What makes this event special:</p>
@@ -159,10 +169,11 @@ export const eventsData = [
   {
     id: "block-party-2024",
     title: "The Block Fiesta",
-    shortDescription:"High energy, vibrant atmosphere...we go block for block fiesta",
+    shortDescription:
+      "High energy, vibrant atmosphere...we go block for block fiesta",
     description: `THE BLOCK FIESTA" is a recurring event that takes place in Calabar, Nigeria, specifically at the Municipal Garden, Marian. It is a vibrant and recurring social event that contributes to the  entertainment scene in Calabar that brings people together for a memorable experience!`,
     longDescription: `
-      <p>Block Party 2024 brings the community together for a day of celebration with music, food, games, and good vibes on the streets of Lagos.</p>
+      <p>THE BLOCK FIESTA" is a recurring event that takes place in Calabar, Nigeria, specifically at the Municipal Garden, Marian. It is a vibrant and recurring social event that contributes to the  entertainment scene in Calabar that brings people together for a memorable experience</p>
       <p>Join us for:</p>
       <ul>
         <li>DJ sets and live performances from local artists</li>
@@ -312,16 +323,15 @@ CALYPSO PICNIC is back and This year's theme is GRAND FIESTA which is set to tra
 Enjoy a fun-filled afternoon of steel drum beats, delicious island eats, and refreshing coconut treats with friends and family!
 `,
     longDescription: `
-      <p>Night of Fashion is a glamorous evening showcasing the latest designs from Nigeria's top fashion talents and emerging designers.</p>
+      <p>Calypso Picnic 2023 was a blast, but calypso Picnic 2024 is bigger, hotter and better
+CALYPSO PICNIC is back and This year's theme is GRAND FIESTA which is set to transform the lush greenery of Riverside Park into a vibrant Caribbean oasis on Thursday, November 22 2024!</p>
       <p>This prestigious event features:</p>
       <ul>
-        <li>Runway shows from established and emerging designers</li>
-        <li>Exhibition of avant-garde fashion pieces</li>
+        <li>Picnic Vibes</li>
         <li>Networking opportunities with industry professionals</li>
-        <li>Exclusive after-party with fashion elites</li>
-        <li>Pop-up shops with designer pieces</li>
+        <li>Exclusive after-party </li>
+        <li>Pop-up music with featured artists</li>
       </ul>
-      <p>Be part of the most stylish night of the year and witness the future of Nigerian fashion unfold before your eyes!</p>
     `,
     date: "2024-11-28",
     time: "7:00 PM",
@@ -330,7 +340,7 @@ Enjoy a fun-filled afternoon of steel drum beats, delicious island eats, and ref
     address: "",
     price: "₦1,500",
     category: "Picnic",
-    image:GrandFiesta,
+    image: GrandFiesta,
     featured: false,
     ticketTypes: [
       {
