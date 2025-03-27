@@ -68,7 +68,7 @@ const Footer = () => {
               </div>
               <div>
                 {[
-                  { name: "FAQ", path: "/faq" },
+                  // { name: "FAQ", path: "/faq" },
                   { name: "About Us", path: "/about" },
                   { name: "Contact Us", path: "/contact" },
                 ].map((link, index) => (
@@ -90,7 +90,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter Column */}
-          <div className='flex flex-col'>
+          {/* <div className='flex flex-col'>
             <h3 className='text-xl font-semibold mb-4 pb-2 border-b-2 border-white inline-block'>
               Newsletter
             </h3>
@@ -114,7 +114,7 @@ const Footer = () => {
                 By subscribing, you agree to our Privacy Policy.
               </p>
             </form>
-          </div>
+          </div> */}
         </div>
 
         {/* Copyright */}
